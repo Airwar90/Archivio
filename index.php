@@ -9,5 +9,6 @@
 <body>
     <?php
     require('connect_db.php');
+    ?>
 </body>
 </html>
