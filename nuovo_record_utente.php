@@ -20,8 +20,11 @@
             $cm = mysqli_real_escape_string($link, trim($_POST['cognome_utente']));
         }
         if empty($errors) {
-            $cd = 
-            $q = "INSERT into utenti(nome_utente, cognome_utente, codice_utente) VALUES (ì$nm', '$cm', '$cd')";
+            $query = "SELECT id from utenti ORDER BY DESC LIMIT 1";
+            $lastId = mysqli_query($link, $query);
+            $codice = $lastId + $consonanti;
+            $cd = mysqli_real_escape_string(trim())
+            $q = "INSERT into utenti(nome_utente, cognome_utente) VALUES ('$nm', '$cm','$cd')";
         }
         
     }
