@@ -8,7 +8,8 @@
 </head>
 <body>
     <?php
-    require('connect_db.php');    
+    require('connect_db.php');       
     ?>
+    <a href = "creazione_utente_form.php"> Creazione utente </a>
 </body>
 </html>
