@@ -8,13 +8,20 @@
 </head>
 <body>
     <?php
-        function getConsonant($str) {
+        function getConsonants($str) {
             $len = strlen($str);
             $lower = strtolower($str);
-            $vowels = ['a', 'e', 'i', 'o', 'u'];
-            
-
-        }
+            $strArr = str_split($lower);
+            $vowels = array('a', 'e', 'i', 'o', 'u');
+            $cons = array();
+            for ($i = 0; $i < $len; $i++) {
+                if (!in_array($strArr[$i], $vowels)) {
+                    array_push($cons, $strArr[$i]);
+                }
+            } 
+            $consStr = implode($cons);
+            return $consStr;  
+        }               
     ?>
 </body>
 </html>
